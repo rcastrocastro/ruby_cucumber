@@ -1,0 +1,38 @@
+---
+# elementos das paginas
+
+# itens comuns 
+
+table_cart: 'table tbody tr'
+
+## home
+btn_restaurante: 'div[class*=jumbotron] a[href="/restaurants"]'
+
+## lista restaurantes
+menu_restaurants: '.restaurant-item' 
+
+# restaurante
+
+menu_produtos: '.menu-item-info-box'
+detail_rest: '#detail'
+cart: '.add-to-cart'
+
+#cart view
+
+box_cart: '#shopping-cart'
+total_cart: 'tr'
+total_cart_text: 'td'
+rmv_cart: '.danger'
+
+# Order Page
+order: 'div[class*=col-sm-6]'
+field_name: 'input[formcontrolname=name]'
+field_email: 'input[formcontrolname=email]'
+field_email_confirm: 'input[formcontrolname=emailConfirmation]'
+field_address: 'input[formcontrolname=address]'
+field_number: 'input[formcontrolname=number]'
+field_optional_adress: 'input[formcontrolname=optionalAddress]'
+radio_payment: 'mt-radio[formcontrolname="paymentOption"]'
+msg_order: '.content'
+
+

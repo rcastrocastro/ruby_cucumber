@@ -1,0 +1,12 @@
+--- 
+default: -p bdd -p chrome -p dev -p html -p json -p screen --publish-quiet
+ci: -p bdd -p chrome_headless -p dev -p html -p json -p screen --publish-quiet
+
+bdd: -f pretty
+dot: -f progress
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+dev: ENV_TYPE=dev
+html: -f html --out=report/report.html
+json: -f json --out=report/report.json
+screen: screenshot=true
