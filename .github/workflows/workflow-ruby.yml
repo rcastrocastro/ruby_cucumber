@@ -31,4 +31,10 @@ jobs:
     - name: Install dependencies
       run: bundle install --retry=3 --jobs=4
     - name: Run tests
-      run: cucumber -p ci -t 'not @not_run' --retry 2 
+      run: cucumber -p ci -t 'not @not_run' --retry 2
+    - name: Report
+      uses: actions/upload-artifact@v2
+      with:
+          name: report
+          path: report/report.html
+
