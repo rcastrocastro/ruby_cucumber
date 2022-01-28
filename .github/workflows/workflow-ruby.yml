@@ -15,7 +15,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-     container:
+    container:
       image: docker://raphaelcastro35/teste_will:01
 
     steps:
