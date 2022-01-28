@@ -15,25 +15,11 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+     container:
+      image: docker://raphaelcastro35/teste_will:01
 
     steps:
     - uses: actions/checkout@v2
-    - name: Installing chromedriver
-      run: |
-        sudo apt-get -y install google-chrome-stable xvfb unzip libxi6 libgconf-2-4
-                sudo apt autoremove
-                sudo apt autoclean
-                sudo apt clean
-                cd /tmp
-                wget "https://chromedriver.storage.googleapis.com/97.0.4692.71/chromedriver_linux64.zip"
-                unzip chromedriver_linux64.zip
-                sudo mv chromedriver /usr/bin/chromedriver
-                sudo chown root:root /usr/bin/chromedriver
-                sudo chmod +x /usr/bin/chromedriver
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@473e4d8fe5dd94ee328fdfca9f8c9c7afc9dae5e
-      with:
-        ruby-version: 2.7
     - name: Install dependencies
       run: bundle install --retry=3 --jobs=4
     - name: Run tests
