@@ -16,7 +16,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     container:
-      image: docker://raphaelcastro35/teste_will:v.1
+      image: docker://raphaelcastro35/dojo_pipeline:v.0.2
 
     steps:
     - uses: actions/checkout@v2
